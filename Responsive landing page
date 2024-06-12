@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Navigation Menu</title>
+<style>
+  /* CSS for the navigation menu */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d2197; /* Initial background color */
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .navbar li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    color: #deeaec; /* Initial font color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Add hover effect */
+  .navbar li a:hover {
+    color: #af1e1e;
+    background-color: #202321;
+  }
+
+  /* Content styles */
+  .content {
+    padding: 20px;
+    margin-top: 50px; /* To prevent overlapping with the fixed navbar */
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="navbar" id="navbar">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+<!-- Page content -->
+<div class="content">
+  <h1>Welcome to Our Website</h1>
+  <p>I have developed this website using html,css,and javscript to develop responsive menu and user friendly menu that will change its background color when the mouse is hovered on it...</p>
+
+</div>
+
+<script>
+  // JavaScript for changing background color on scroll
+  window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = '#333'; // New background color
+    } else {
+      navbar.style.backgroundColor = '#fff'; // Original background color
+    }
+  });
+</script>
+</body>
+</html>
